@@ -12,6 +12,7 @@
 		C96A517E789B4E7B8A929B79 /* FakeServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5D26AAC15282A1D68993 /* FakeServer.swift */; };
 		C96A575CAC129BFD73D4FB1B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5A3187203C449F88E6D7 /* DetailViewController.swift */; };
 		C96A5980602BB3AB34A820CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96A5F073D03FECFDFB884A0 /* Assets.xcassets */; };
+		C96A59A32A31058B4B8676CA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A59745989263D1B1C1DA1 /* Movie.swift */; };
 		C96A5A141AD8BB12845836BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A5A8D4D40A80F14DA5794 /* LaunchScreen.storyboard */; };
 		C96A5BCFC5E67B25CF718EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A544D529DF92F239BDD00 /* Main.storyboard */; };
 		C96A5C1D499621D1907F2D05 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5C53BD8501A7E057752A /* MovieCell.swift */; };
@@ -24,6 +25,7 @@
 		C96A544D529DF92F239BDD00 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C96A54C969DB0B88B6880410 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C96A57DB83F916485CDCB39E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C96A59745989263D1B1C1DA1 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		C96A5A3187203C449F88E6D7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C96A5A8D4D40A80F14DA5794 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C96A5B36DBB1EE7841C4E53C /* Movie Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C96A5F5DE71265885726023A /* MovieSearchResult.swift */,
+				C96A59745989263D1B1C1DA1 /* Movie.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				C96A517E789B4E7B8A929B79 /* FakeServer.swift in Sources */,
 				C96A50FF24E59793776917DE /* CardView.swift in Sources */,
 				C96A5C1D499621D1907F2D05 /* MovieCell.swift in Sources */,
+				C96A59A32A31058B4B8676CA /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
