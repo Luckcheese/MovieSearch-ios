@@ -5,17 +5,15 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-    var detailItem: AnyObject? {
+    var detailItem: MovieSearchResult? {
         didSet {
             self.configureView()
         }
     }
 
     func configureView() {
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
+        if let label = detailDescriptionLabel {
+            label.text = detailItem!.title
         }
     }
 
