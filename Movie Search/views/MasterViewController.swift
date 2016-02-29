@@ -49,10 +49,9 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MovieCell
 
-        let movie = movies[indexPath.row]
-        cell.textLabel!.text = movie.title
+        cell.movie = movies[indexPath.row]
 
         return cell
     }
