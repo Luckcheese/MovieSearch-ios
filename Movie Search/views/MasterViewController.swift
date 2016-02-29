@@ -1,7 +1,7 @@
 import UIKit
 
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, MovieCellDelegate {
 
     var detailViewController: DetailViewController? = nil
     var movies = [MovieSearchResult]()
@@ -51,8 +51,21 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MovieCell
 
+        cell.delegate = self
         cell.movie = movies[indexPath.row]
 
         return cell
     }
+
+
+    // MARK: - MovieCellDelegate
+
+    func showDetails(movie: MovieSearchResult) {
+        UIAlertView(title:"show details", message:movie.title, delegate:nil, cancelButtonTitle:"ok").show()
+    }
+
+    func share(movie: MovieSearchResult) {
+        UIAlertView(title:"share", message:movie.title, delegate:nil, cancelButtonTitle:"ok").show()
+    }
+
 }

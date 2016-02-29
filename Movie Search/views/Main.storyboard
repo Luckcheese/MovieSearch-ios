@@ -120,10 +120,16 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f51-7a-9Of">
                                                     <rect key="frame" x="16" y="390" width="61" height="30"/>
                                                     <state key="normal" title="Detalhes"/>
+                                                    <connections>
+                                                        <action selector="showDetails" destination="WCw-Qf-5nD" eventType="touchUpInside" id="hSl-86-ORf"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6la-Dm-C7V">
                                                     <rect key="frame" x="516" y="390" width="36" height="30"/>
                                                     <state key="normal" title="B" image="ic_share_black"/>
+                                                    <connections>
+                                                        <action selector="share" destination="WCw-Qf-5nD" eventType="touchUpInside" id="crF-uo-fgU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
