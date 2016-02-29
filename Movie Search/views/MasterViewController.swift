@@ -29,7 +29,7 @@ class MasterViewController: UITableViewController, MovieCellDelegate {
         if segue.identifier == "showDetail" {
             if let movie = sender as? MovieSearchResult {
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = movie
+                controller.searchedItem = movie
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }

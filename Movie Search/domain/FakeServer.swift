@@ -10,4 +10,8 @@ class FakeServer {
 
         return result
     }
+
+    func details() -> Movie {
+        return Movie()
+    }
 }
