@@ -15,7 +15,7 @@
 		C96A5A141AD8BB12845836BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A5A8D4D40A80F14DA5794 /* LaunchScreen.storyboard */; };
 		C96A5BCFC5E67B25CF718EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96A544D529DF92F239BDD00 /* Main.storyboard */; };
 		C96A5C1D499621D1907F2D05 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5C53BD8501A7E057752A /* MovieCell.swift */; };
-		C96A5DCEE41B9F1021FB1295 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5F5DE71265885726023A /* Movie.swift */; };
+		C96A5DCEE41B9F1021FB1295 /* MovieSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5F5DE71265885726023A /* MovieSearchResult.swift */; };
 		C96A5E34017C8E64ADD0CD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A57DB83F916485CDCB39E /* AppDelegate.swift */; };
 		C96A5E4F17F40054D9A8537C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5B6E066460033844C4E7 /* MasterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +32,7 @@
 		C96A5D26AAC15282A1D68993 /* FakeServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeServer.swift; sourceTree = "<group>"; };
 		C96A5E906E8A14893ECC16CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C96A5F073D03FECFDFB884A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C96A5F5DE71265885726023A /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C96A5F5DE71265885726023A /* MovieSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 		C96A59347D40407F914E07BE /* models */ = {
 			isa = PBXGroup;
 			children = (
-				C96A5F5DE71265885726023A /* Movie.swift */,
+				C96A5F5DE71265885726023A /* MovieSearchResult.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 				C96A5E34017C8E64ADD0CD66 /* AppDelegate.swift in Sources */,
 				C96A5E4F17F40054D9A8537C /* MasterViewController.swift in Sources */,
 				C96A575CAC129BFD73D4FB1B /* DetailViewController.swift in Sources */,
-				C96A5DCEE41B9F1021FB1295 /* Movie.swift in Sources */,
+				C96A5DCEE41B9F1021FB1295 /* MovieSearchResult.swift in Sources */,
 				C96A517E789B4E7B8A929B79 /* FakeServer.swift in Sources */,
 				C96A50FF24E59793776917DE /* CardView.swift in Sources */,
 				C96A5C1D499621D1907F2D05 /* MovieCell.swift in Sources */,
