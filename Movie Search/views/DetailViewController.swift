@@ -7,7 +7,7 @@ class DetailViewController: UITableViewController {
 
     var searchedItem: MovieSearchResult? {
         didSet {
-            movie = FakeServer().details()
+            movie = Server().details()
         }
     }
 

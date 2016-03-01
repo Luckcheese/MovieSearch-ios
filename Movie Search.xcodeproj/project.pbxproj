@@ -10,7 +10,7 @@
 		B48D642A0C198EBA98B3E48A /* Pods_Movie_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12220B399400320B845D8A97 /* Pods_Movie_Search.framework */; };
 		C96A50FF24E59793776917DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A54C969DB0B88B6880410 /* CardView.swift */; };
 		C96A51678EAD6EB31949F59F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C96A5E906E8A14893ECC16CE /* Info.plist */; };
-		C96A517E789B4E7B8A929B79 /* FakeServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5D26AAC15282A1D68993 /* FakeServer.swift */; };
+		C96A517E789B4E7B8A929B79 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5D26AAC15282A1D68993 /* Server.swift */; };
 		C96A573C2B406BF72E51B832 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5688338483EE359EC4B4 /* InfoCell.swift */; };
 		C96A574DFF5E0ED4866400DE /* ImageTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5B5FAC12DFC5841CCA55 /* ImageTitleCell.swift */; };
 		C96A575CAC129BFD73D4FB1B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5A3187203C449F88E6D7 /* DetailViewController.swift */; };
@@ -43,7 +43,7 @@
 		C96A5B36DBB1EE7841C4E53C /* Movie Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96A5B5FAC12DFC5841CCA55 /* ImageTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTitleCell.swift; sourceTree = "<group>"; };
 		C96A5B6E066460033844C4E7 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		C96A5D26AAC15282A1D68993 /* FakeServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeServer.swift; sourceTree = "<group>"; };
+		C96A5D26AAC15282A1D68993 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		C96A5E906E8A14893ECC16CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C96A5F073D03FECFDFB884A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96A5F5DE71265885726023A /* MovieSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchResult.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		C96A5EE639FE7B9D23C10580 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				C96A5D26AAC15282A1D68993 /* FakeServer.swift */,
+				C96A5D26AAC15282A1D68993 /* Server.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				C96A5E4F17F40054D9A8537C /* MasterViewController.swift in Sources */,
 				C96A575CAC129BFD73D4FB1B /* DetailViewController.swift in Sources */,
 				C96A5DCEE41B9F1021FB1295 /* MovieSearchResult.swift in Sources */,
-				C96A517E789B4E7B8A929B79 /* FakeServer.swift in Sources */,
+				C96A517E789B4E7B8A929B79 /* Server.swift in Sources */,
 				C96A50FF24E59793776917DE /* CardView.swift in Sources */,
 				C96A59A32A31058B4B8676CA /* Movie.swift in Sources */,
 				C96A5F528F6E8F36D201A35C /* MovieCell.swift in Sources */,

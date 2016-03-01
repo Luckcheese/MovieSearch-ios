@@ -1,12 +1,13 @@
 import UIKit
 
 
-class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBarDelegate {
+class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBarDelegate, ServerSearchDelegate {
 
     var detailViewController: DetailViewController? = nil
     var movies = [MovieSearchResult]()
 
     let searchController = UISearchController(searchResultsController: nil)
+    let server = Server()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,8 +78,15 @@ class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBa
 
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         if let text = searchBar.text where text.characters.count > 0 {
-            movies = FakeServer().search()
-            tableView.reloadData()
+            server.search(text, delegate: self)
         }
+    }
+
+
+    // MARK: - ServerSearchDelegate
+
+    func moviesSearched(query: String, searchResult: SearchResult) {
+        movies = searchResult.result
+        tableView.reloadData()
     }
 }
