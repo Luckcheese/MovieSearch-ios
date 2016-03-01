@@ -30,6 +30,16 @@ class Server {
         }
     }
 
+    func details(imdbId: String, delegate: ServerDetailDelegate) {
+        Alamofire.request(.GET, url, parameters: ["i": imdbId]).responseObject() {
+            (response: Response<Movie, NSError>) in
+
+            if self.handleRequestError(response, delegate:delegate) {
+                delegate.movieDetailRequested(imdbId, movie: response.result.value!)
+            }
+        }
+    }
+
     private func handleRequestError<T: RequestError>(response: Response<T, NSError>, delegate: ServerError) -> Bool {
         if let result = response.result.value {
             if result.success! {
@@ -44,9 +54,5 @@ class Server {
         }
         return false
 
-    }
-
-    func details() -> Movie {
-        return Movie()
     }
 }

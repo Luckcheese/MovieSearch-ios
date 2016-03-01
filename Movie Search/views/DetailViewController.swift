@@ -1,17 +1,19 @@
 import UIKit
 
 
-class DetailViewController: UITableViewController {
+class DetailViewController: UITableViewController, ServerDetailDelegate {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    let server = Server()
+
     var searchedItem: MovieSearchResult? {
         didSet {
-            movie = Server().details()
+            server.details(searchedItem!.imdbID, delegate:self)
         }
     }
 
-    var movie: Movie! {
+    var movie: Movie? {
         didSet {
             self.configureView()
         }
@@ -20,19 +22,21 @@ class DetailViewController: UITableViewController {
     var infoDir = [(String, String)]()
 
     func configureView() {
-        infoDir.removeAll(keepCapacity: true)
+        if let movie = self.movie {
+            infoDir.removeAll(keepCapacity: true)
 
-        infoDir.append(("ic_actors", movie.actors))
-        infoDir.append(("ic_directors", movie.director))
-        infoDir.append(("ic_writers", movie.writer))
-        infoDir.append(("ic_release_date", movie.released))
-        infoDir.append(("ic_duration", movie.runtime))
-        infoDir.append(("ic_genre", movie.genre))
-        infoDir.append(("ic_metascore", movie.metascore))
-        infoDir.append(("ic_awards", movie.awards))
-        infoDir.append(("ic_country", movie.country))
+            infoDir.append(("ic_actors", movie.actors))
+            infoDir.append(("ic_directors", movie.director))
+            infoDir.append(("ic_writers", movie.writer))
+            infoDir.append(("ic_release_date", movie.released))
+            infoDir.append(("ic_duration", movie.runtime))
+            infoDir.append(("ic_genre", movie.genre))
+            infoDir.append(("ic_metascore", movie.metascore))
+            infoDir.append(("ic_awards", movie.awards))
+            infoDir.append(("ic_country", movie.country))
 
-        tableView.reloadData()
+            tableView.reloadData()
+        }
     }
 
     override func viewDidLoad() {
@@ -58,12 +62,19 @@ class DetailViewController: UITableViewController {
         switch indexPath.row {
             case 0:
                 let cell = tableView.dequeueReusableCellWithIdentifier("image_title", forIndexPath: indexPath) as! ImageTitleCell
-                cell.titleView.text = movie.title
+                if let m = movie {
+                    cell.titleView.text = m.title
+                }
+                else {
+                    cell.titleView.text = searchedItem!.title
+                }
                 return cell
 
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("plot", forIndexPath: indexPath) as! PlotCell
-                cell.plotView.text = movie.plot
+                if let m = movie {
+                    cell.plotView.text = m.plot
+                }
                 return cell
 
             default:
@@ -76,20 +87,15 @@ class DetailViewController: UITableViewController {
         }
     }
 
-//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        switch indexPath.row {
-//            case 0:
-//                return 337.0
-//
-//            case 1:
-//                return 91.0
-//
-//            default:
-//                return UITableViewAutomaticDimension
-//        }
-//    }
-//
-//    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
+
+    // MARK: - ServerDetailDelegate
+
+    func serverReturnedError(message: String) {
+        UIAlertView(title:"Error", message:message, delegate:nil, cancelButtonTitle:"ok").show()
+    }
+
+    func movieDetailRequested(imdbId: String, movie: Movie) {
+        self.movie = movie
+        tableView.reloadData()
+    }
 }

@@ -1,6 +1,7 @@
 import Foundation
+import ObjectMapper
 
-class Movie {
+class Movie: RequestError {
 
     var title: String!
     var year: String!
@@ -22,20 +23,27 @@ class Movie {
     var imdbID: String!
     var type: String!
 
-    init() {
-        title = "Movie Title"
-        year = "2000"
-        rated = "90"
-        released = "10/10/2000"
-        runtime = "100"
-        genre = "legal"
-        director = "alguem"
-        writer = "alguem"
-        actors = "umas pessoas"
-        plot = "a volta dos que não foram a volta dos que não foram a volta dos que não foram a volta dos que não foram a volta dos que não foram a volta dos que não foram a volta dos que não foram a volta dos que não foram"
-        language = "falada"
-        country = "HUEbr"
-        awards =  "nenhum"
-        metascore = "90"
+    override func mapping(map: Map) {
+        super.mapping(map)
+
+        title <- map["Title"]
+        year <- map["Year"]
+        rated <- map["Rated"]
+        released <- map["Released"]
+        runtime <- map["Runtime"]
+        genre <- map["Genre"]
+        director <- map["Director"]
+        writer <- map["Writer"]
+        actors <- map["Actors"]
+        plot <- map["Plot"]
+        language <- map["Language"]
+        country <- map["Country"]
+        awards <- map["Awards"]
+        poster <- map["Poster"]
+        metascore <- map["Metascore"]
+        imdbRating <- map["imdbRating"]
+        imdbVotes <- map["imdbVotes"]
+        imdbID <- map["imdbID"]
+        type <- map["Type"]
     }
 }
