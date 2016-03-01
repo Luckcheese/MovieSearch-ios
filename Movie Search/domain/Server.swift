@@ -20,8 +20,8 @@ class Server {
 
     let url = "https://www.omdbapi.com/"
 
-    func search(query: String, delegate: ServerSearchDelegate) {
-        Alamofire.request(.GET, url, parameters: ["s": query]).responseObject() {
+    func search(query: String, page: Int, delegate: ServerSearchDelegate) {
+        Alamofire.request(.GET, url, parameters: ["s": query, "page": page]).responseObject() {
             (response: Response<SearchResult, NSError>) in
 
             if self.handleRequestError(response, delegate:delegate) {

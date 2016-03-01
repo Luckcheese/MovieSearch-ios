@@ -1,13 +1,13 @@
 import UIKit
 
 
-class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBarDelegate, ServerSearchDelegate {
+class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBarDelegate, SearchDelegate {
 
     var detailViewController: DetailViewController? = nil
     var movies = [MovieSearchResult]()
 
     let searchController = UISearchController(searchResultsController: nil)
-    let server = Server()
+    var server: Search!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +59,12 @@ class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBa
         cell.delegate = self
         cell.movie = movies[indexPath.row]
 
+        if let s = server {
+            if indexPath.row == movies.count - 1 {
+                s.nexPage()
+            }
+        }
+
         return cell
     }
 
@@ -78,22 +84,24 @@ class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBa
 
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         if let text = searchBar.text where text.characters.count > 0 {
-            server.search(text, delegate: self)
+            server = Search(query:text)
+            server.delegate = self
+            server.nexPage()
         }
     }
 
 
-    // MARK: - ServerSearchDelegate
+    // MARK: - SearchDelegate
 
-    func serverReturnedError(message: String) {
+    func searchSuccess() {
+        movies = server!.movies
+        tableView.reloadData()
+    }
+
+    func searchError(message: String) {
         movies = [MovieSearchResult]()
         tableView.reloadData()
 
         UIAlertView(title:"Error", message:message, delegate:nil, cancelButtonTitle:"ok").show()
-    }
-
-    func moviesSearched(query: String, searchResult: SearchResult) {
-        movies = searchResult.result
-        tableView.reloadData()
     }
 }
