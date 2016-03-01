@@ -22,6 +22,7 @@
 		C96A5DCEE41B9F1021FB1295 /* MovieSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5F5DE71265885726023A /* MovieSearchResult.swift */; };
 		C96A5E34017C8E64ADD0CD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A57DB83F916485CDCB39E /* AppDelegate.swift */; };
 		C96A5E4F17F40054D9A8537C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5B6E066460033844C4E7 /* MasterViewController.swift */; };
+		C96A5EA2796F30D01D142A3D /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A52B1AD5EED9AB770D71E /* SearchResult.swift */; };
 		C96A5F528F6E8F36D201A35C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A58701F3B18C60526B2E2 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		0FD61A4CFB724A61372C792A /* Pods-Movie Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Search/Pods-Movie Search.debug.xcconfig"; sourceTree = "<group>"; };
 		12220B399400320B845D8A97 /* Pods_Movie_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53822DCA3E64EA8C7C3D6F21 /* Pods-Movie Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Search/Pods-Movie Search.release.xcconfig"; sourceTree = "<group>"; };
+		C96A52B1AD5EED9AB770D71E /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		C96A544D529DF92F239BDD00 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C96A54C969DB0B88B6880410 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C96A5688338483EE359EC4B4 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				C96A5F5DE71265885726023A /* MovieSearchResult.swift */,
 				C96A59745989263D1B1C1DA1 /* Movie.swift */,
+				C96A52B1AD5EED9AB770D71E /* SearchResult.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				C96A574DFF5E0ED4866400DE /* ImageTitleCell.swift in Sources */,
 				C96A5D10C3407E780E95B9AD /* PlotCell.swift in Sources */,
 				C96A573C2B406BF72E51B832 /* InfoCell.swift in Sources */,
+				C96A5EA2796F30D01D142A3D /* SearchResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
