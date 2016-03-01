@@ -11,7 +11,7 @@ class SearchResult: Mappable {
     }
 
     func mapping(map: Map) {
-        total <- (map["totalResults"], TransformOf<Int, String>(fromJSON: { Int($0!) }, toJSON: { $0.map { String($0) } }))
+        total <- (map["totalResults"], StringToInt())
         result <- map["Search"]
     }
 }

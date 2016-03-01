@@ -11,6 +11,7 @@
 		C96A50FF24E59793776917DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A54C969DB0B88B6880410 /* CardView.swift */; };
 		C96A51678EAD6EB31949F59F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C96A5E906E8A14893ECC16CE /* Info.plist */; };
 		C96A517E789B4E7B8A929B79 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5D26AAC15282A1D68993 /* Server.swift */; };
+		C96A5729E814F480436B620D /* StringToInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A51958C991E95B47E817C /* StringToInt.swift */; };
 		C96A573C2B406BF72E51B832 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5688338483EE359EC4B4 /* InfoCell.swift */; };
 		C96A574DFF5E0ED4866400DE /* ImageTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5B5FAC12DFC5841CCA55 /* ImageTitleCell.swift */; };
 		C96A575CAC129BFD73D4FB1B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5A3187203C449F88E6D7 /* DetailViewController.swift */; };
@@ -30,6 +31,7 @@
 		0FD61A4CFB724A61372C792A /* Pods-Movie Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Search/Pods-Movie Search.debug.xcconfig"; sourceTree = "<group>"; };
 		12220B399400320B845D8A97 /* Pods_Movie_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53822DCA3E64EA8C7C3D6F21 /* Pods-Movie Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Search/Pods-Movie Search.release.xcconfig"; sourceTree = "<group>"; };
+		C96A51958C991E95B47E817C /* StringToInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringToInt.swift; sourceTree = "<group>"; };
 		C96A52B1AD5EED9AB770D71E /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		C96A544D529DF92F239BDD00 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C96A54C969DB0B88B6880410 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C96A50E41C2A4AB25D5A3DF3 /* mappers */ = {
+			isa = PBXGroup;
+			children = (
+				C96A51958C991E95B47E817C /* StringToInt.swift */,
+			);
+			path = mappers;
+			sourceTree = "<group>";
+		};
 		C96A51119CD06ACED659DABE /* Movie Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 				C96A5F73C46B952A39636184 /* views */,
 				C96A59347D40407F914E07BE /* models */,
 				C96A5EE639FE7B9D23C10580 /* domain */,
+				C96A50E41C2A4AB25D5A3DF3 /* mappers */,
 			);
 			path = "Movie Search";
 			sourceTree = "<group>";
@@ -279,6 +290,7 @@
 				C96A5D10C3407E780E95B9AD /* PlotCell.swift in Sources */,
 				C96A573C2B406BF72E51B832 /* InfoCell.swift in Sources */,
 				C96A5EA2796F30D01D142A3D /* SearchResult.swift in Sources */,
+				C96A5729E814F480436B620D /* StringToInt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
