@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B48D642A0C198EBA98B3E48A /* Pods_Movie_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12220B399400320B845D8A97 /* Pods_Movie_Search.framework */; };
+		C96A5077FF970B5B9AA38DDB /* BoolToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5A19FCD0F8F80201EC22 /* BoolToString.swift */; };
 		C96A50FF24E59793776917DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A54C969DB0B88B6880410 /* CardView.swift */; };
 		C96A51678EAD6EB31949F59F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C96A5E906E8A14893ECC16CE /* Info.plist */; };
 		C96A517E789B4E7B8A929B79 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5D26AAC15282A1D68993 /* Server.swift */; };
@@ -41,6 +42,7 @@
 		C96A57DB83F916485CDCB39E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96A58701F3B18C60526B2E2 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		C96A59745989263D1B1C1DA1 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C96A5A19FCD0F8F80201EC22 /* BoolToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolToString.swift; sourceTree = "<group>"; };
 		C96A5A3187203C449F88E6D7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C96A5A8D4D40A80F14DA5794 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C96A5B36DBB1EE7841C4E53C /* Movie Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				C96A51958C991E95B47E817C /* StringToInt.swift */,
+				C96A5A19FCD0F8F80201EC22 /* BoolToString.swift */,
 			);
 			path = mappers;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				C96A5EA2796F30D01D142A3D /* SearchResult.swift in Sources */,
 				C96A5729E814F480436B620D /* StringToInt.swift in Sources */,
 				C96A5CF5EB7296494B10DB71 /* String.swift in Sources */,
+				C96A5077FF970B5B9AA38DDB /* BoolToString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
