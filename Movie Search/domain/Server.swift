@@ -3,11 +3,16 @@ import Alamofire
 import AlamofireObjectMapper
 
 
-protocol ServerSearchDelegate {
-    func moviesSearched(query: String, searchResult: SearchResult)
+protocol ServerError {
+    func serverReturnedError(message: String)
 }
 
-protocol ServerDetailDelegate {
+protocol ServerSearchDelegate: ServerError {
+    func moviesSearched(query: String, searchResult: SearchResult)
+
+}
+
+protocol ServerDetailDelegate: ServerError {
     func movieDetailRequested(imdbId: String, movie: Movie)
 }
 
@@ -19,7 +24,17 @@ class Server {
         Alamofire.request(.GET, url, parameters: ["s": query]).responseObject() {
             (response: Response<SearchResult, NSError>) in
 
-            delegate.moviesSearched(query, searchResult: response.result.value!)
+            if let searchResult = response.result.value {
+                if searchResult.success! {
+                    delegate.moviesSearched(query, searchResult:searchResult)
+                }
+                else {
+                    delegate.serverReturnedError(searchResult.message)
+                }
+            }
+            else {
+                delegate.serverReturnedError(response.result.error!.description)
+            }
         }
     }
 

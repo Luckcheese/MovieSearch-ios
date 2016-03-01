@@ -1,16 +1,13 @@
 import Foundation
 import ObjectMapper
 
-class SearchResult: Mappable {
+class SearchResult: RequestError {
 
     var total: Int!
     var result: [MovieSearchResult]!
 
-    required init?(_ map: Map){
-
-    }
-
-    func mapping(map: Map) {
+    override func mapping(map: Map) {
+        super.mapping(map)
         total <- (map["totalResults"], StringToInt())
         result <- map["Search"]
     }

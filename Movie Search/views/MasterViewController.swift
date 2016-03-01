@@ -85,6 +85,13 @@ class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBa
 
     // MARK: - ServerSearchDelegate
 
+    func serverReturnedError(message: String) {
+        movies = [MovieSearchResult]()
+        tableView.reloadData()
+
+        UIAlertView(title:"Error", message:message, delegate:nil, cancelButtonTitle:"ok").show()
+    }
+
     func moviesSearched(query: String, searchResult: SearchResult) {
         movies = searchResult.result
         tableView.reloadData()
