@@ -1,10 +1,12 @@
 import UIKit
 
 
-class MasterViewController: UITableViewController, MovieCellDelegate {
+class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBarDelegate {
 
     var detailViewController: DetailViewController? = nil
     var movies = [MovieSearchResult]()
+
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,7 +16,10 @@ class MasterViewController: UITableViewController, MovieCellDelegate {
             self.detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? DetailViewController
         }
 
-        movies = FakeServer().search()
+        searchController.searchBar.delegate = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -67,4 +72,13 @@ class MasterViewController: UITableViewController, MovieCellDelegate {
         UIAlertView(title:"share", message:movie.title, delegate:nil, cancelButtonTitle:"ok").show()
     }
 
+
+    // MARK: - UISearchBarDelegate
+
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        if let text = searchBar.text where text.characters.count > 0 {
+            movies = FakeServer().search()
+            tableView.reloadData()
+        }
+    }
 }
