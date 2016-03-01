@@ -53,6 +53,15 @@ class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBa
         return movies.count
     }
 
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let s = server {
+            return String(format: "Encontramos %02d resultados:", s.totalResuls)
+        }
+        else {
+            return nil
+        }
+    }
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MovieCell
 
