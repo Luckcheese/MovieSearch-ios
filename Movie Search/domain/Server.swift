@@ -24,18 +24,26 @@ class Server {
         Alamofire.request(.GET, url, parameters: ["s": query]).responseObject() {
             (response: Response<SearchResult, NSError>) in
 
-            if let searchResult = response.result.value {
-                if searchResult.success! {
-                    delegate.moviesSearched(query, searchResult:searchResult)
-                }
-                else {
-                    delegate.serverReturnedError(searchResult.message)
-                }
-            }
-            else {
-                delegate.serverReturnedError(response.result.error!.description)
+            if self.handleRequestError(response, delegate:delegate) {
+                delegate.moviesSearched(query, searchResult:response.result.value!)
             }
         }
+    }
+
+    private func handleRequestError<T: RequestError>(response: Response<T, NSError>, delegate: ServerError) -> Bool {
+        if let result = response.result.value {
+            if result.success! {
+                return true
+            }
+            else {
+                delegate.serverReturnedError(result.message)
+            }
+        }
+        else {
+            delegate.serverReturnedError(response.result.error!.description)
+        }
+        return false
+
     }
 
     func details() -> Movie {
