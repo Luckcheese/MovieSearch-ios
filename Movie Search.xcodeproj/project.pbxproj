@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19FAEF8B1C8712D000AB3D82 /* EmptyResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19FAEF8A1C8712D000AB3D82 /* EmptyResultView.xib */; };
 		B48D642A0C198EBA98B3E48A /* Pods_Movie_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12220B399400320B845D8A97 /* Pods_Movie_Search.framework */; };
 		C96A5077FF970B5B9AA38DDB /* BoolToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5A19FCD0F8F80201EC22 /* BoolToString.swift */; };
 		C96A50FF24E59793776917DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A54C969DB0B88B6880410 /* CardView.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		0FD61A4CFB724A61372C792A /* Pods-Movie Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Search/Pods-Movie Search.debug.xcconfig"; sourceTree = "<group>"; };
 		12220B399400320B845D8A97 /* Pods_Movie_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19FAEF8A1C8712D000AB3D82 /* EmptyResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyResultView.xib; sourceTree = "<group>"; };
 		53822DCA3E64EA8C7C3D6F21 /* Pods-Movie Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movie Search/Pods-Movie Search.release.xcconfig"; sourceTree = "<group>"; };
 		C96A51958C991E95B47E817C /* StringToInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringToInt.swift; sourceTree = "<group>"; };
 		C96A52B1AD5EED9AB770D71E /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				C96A54C969DB0B88B6880410 /* CardView.swift */,
 				C96A5C251D8E0529CB6E265F /* CircleView.swift */,
+				19FAEF8A1C8712D000AB3D82 /* EmptyResultView.xib */,
 			);
 			path = customViews;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C96A5980602BB3AB34A820CD /* Assets.xcassets in Resources */,
+				19FAEF8B1C8712D000AB3D82 /* EmptyResultView.xib in Resources */,
 				C96A5BCFC5E67B25CF718EC9 /* Main.storyboard in Resources */,
 				C96A5A141AD8BB12845836BE /* LaunchScreen.storyboard in Resources */,
 			);

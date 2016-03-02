@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="5z5-Ra-iI5">
+                    <rect key="frame" x="50" y="152" width="500" height="297"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70c-fD-sEd" customClass="CircleView" customModule="Movie_Search" customModuleProvider="target">
+                            <rect key="frame" x="175" y="16" width="150" height="150"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="ZoY-Ip-qXx"/>
+                                <constraint firstAttribute="height" constant="150" id="e54-Ji-mHv"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="UxF-7L-xzD">
+                            <rect key="frame" x="207" y="48" width="86" height="86"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busque um filme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD2-LV-Xl7">
+                            <rect key="frame" x="162" y="198" width="176" height="27"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9N8-rU-liA">
+                            <rect key="frame" x="106" y="240" width="289" height="41"/>
+                            <string key="text">Para buscar um filme é simples, basta
+digitar o título no campo de busca.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="70c-fD-sEd" firstAttribute="top" secondItem="5z5-Ra-iI5" secondAttribute="top" constant="16" id="06d-u5-reF"/>
+                        <constraint firstItem="9N8-rU-liA" firstAttribute="centerX" secondItem="5z5-Ra-iI5" secondAttribute="centerX" id="50w-Ia-tR9"/>
+                        <constraint firstAttribute="bottom" secondItem="9N8-rU-liA" secondAttribute="bottom" constant="16" id="6QF-u1-37W"/>
+                        <constraint firstItem="70c-fD-sEd" firstAttribute="bottom" secondItem="UxF-7L-xzD" secondAttribute="bottom" constant="32" id="94M-Gr-85V"/>
+                        <constraint firstItem="fD2-LV-Xl7" firstAttribute="top" secondItem="70c-fD-sEd" secondAttribute="bottom" constant="32" id="AIy-tK-BpB"/>
+                        <constraint firstAttribute="width" constant="500" id="BDx-Us-FXW"/>
+                        <constraint firstItem="9N8-rU-liA" firstAttribute="top" secondItem="fD2-LV-Xl7" secondAttribute="bottom" constant="15" id="HSB-3c-CBq"/>
+                        <constraint firstItem="UxF-7L-xzD" firstAttribute="leading" secondItem="70c-fD-sEd" secondAttribute="leading" constant="32" id="Xcp-aL-ckc"/>
+                        <constraint firstItem="fD2-LV-Xl7" firstAttribute="centerX" secondItem="5z5-Ra-iI5" secondAttribute="centerX" id="mUQ-B2-aoN"/>
+                        <constraint firstItem="70c-fD-sEd" firstAttribute="centerX" secondItem="5z5-Ra-iI5" secondAttribute="centerX" id="mim-xX-hDq"/>
+                        <constraint firstItem="UxF-7L-xzD" firstAttribute="top" secondItem="70c-fD-sEd" secondAttribute="top" constant="32" id="rlL-y9-x2V"/>
+                        <constraint firstItem="70c-fD-sEd" firstAttribute="trailing" secondItem="UxF-7L-xzD" secondAttribute="trailing" constant="32" id="wU3-lN-tGE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5z5-Ra-iI5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ibx-g3-fT6"/>
+                <constraint firstItem="5z5-Ra-iI5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Iul-wQ-f4t"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_search" width="48" height="48"/>
+    </resources>
+</document>

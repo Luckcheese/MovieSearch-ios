@@ -21,6 +21,10 @@ class MasterViewController: UITableViewController, MovieCellDelegate, UISearchBa
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        tableView.backgroundView = UINib(
+        nibName: "EmptyResultView",
+                bundle: NSBundle.mainBundle()
+        ).instantiateWithOwner(nil, options: nil)[0] as? UIView
     }
 
     override func viewWillAppear(animated: Bool) {
