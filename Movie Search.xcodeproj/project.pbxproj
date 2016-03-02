@@ -10,7 +10,6 @@
 		B48D642A0C198EBA98B3E48A /* Pods_Movie_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12220B399400320B845D8A97 /* Pods_Movie_Search.framework */; };
 		C96A5077FF970B5B9AA38DDB /* BoolToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5A19FCD0F8F80201EC22 /* BoolToString.swift */; };
 		C96A50FF24E59793776917DE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A54C969DB0B88B6880410 /* CardView.swift */; };
-		C96A51678EAD6EB31949F59F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C96A5E906E8A14893ECC16CE /* Info.plist */; };
 		C96A517E789B4E7B8A929B79 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5D26AAC15282A1D68993 /* Server.swift */; };
 		C96A5687679ED5D44C2393F4 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5498EB4E184164E1BFDD /* RequestError.swift */; };
 		C96A5729E814F480436B620D /* StringToInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A51958C991E95B47E817C /* StringToInt.swift */; };
@@ -212,6 +211,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = LuckCheese;
 			};
 			buildConfigurationList = C96A52937923704AF5C41992 /* Build configuration list for PBXProject "Movie Search" */;
@@ -236,7 +236,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96A51678EAD6EB31949F59F /* Info.plist in Resources */,
 				C96A5980602BB3AB34A820CD /* Assets.xcassets in Resources */,
 				C96A5BCFC5E67B25CF718EC9 /* Main.storyboard in Resources */,
 				C96A5A141AD8BB12845836BE /* LaunchScreen.storyboard in Resources */,
